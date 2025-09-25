@@ -5,8 +5,8 @@
       "name": "Test Site",
       "id": "97395c41-2a22-480c-8b33-583f7573fb7f",
       "status": "online",
-      "lastPing": "2025-09-25T19:08:17.905Z",
-      "responseTime": 4955,
+      "lastPing": "2025-09-25T19:29:26.151Z",
+      "responseTime": 298,
       "lastError": null,
       "createdAt": "2025-09-25T18:41:25.223Z"
     },
@@ -15,8 +15,8 @@
       "name": "Status Test",
       "id": "6db15cb8-8f53-46a8-9113-19557154363d",
       "status": "warning",
-      "lastPing": "2025-09-25T19:08:26.004Z",
-      "responseTime": 7097,
+      "lastPing": "2025-09-25T19:29:44.489Z",
+      "responseTime": 17334,
       "lastError": null,
       "createdAt": "2025-09-25T18:44:14.824Z"
     },
@@ -24,9 +24,9 @@
       "url": "https://httpbin.org/delay/1",
       "name": "Delay Test",
       "id": "d247b2c2-8036-4900-8d9d-e34ca6f3a5ad",
-      "status": "online",
-      "lastPing": "2025-09-25T19:08:31.063Z",
-      "responseTime": 4057,
+      "status": "warning",
+      "lastPing": "2025-09-25T19:30:04.619Z",
+      "responseTime": 19129,
       "lastError": null,
       "createdAt": "2025-09-25T18:44:50.303Z"
     },
@@ -34,43 +34,53 @@
       "url": "https://httpbin.org/status/200",
       "name": "Status Test",
       "id": "2fa121db-3f7f-4bd2-baaf-6a88d7803e78",
-      "status": "offline",
-      "lastPing": "2025-09-25T19:08:32.297Z",
-      "responseTime": 233,
-      "lastError": "HTTP 502: Bad Gateway",
+      "status": "online",
+      "lastPing": "2025-09-25T19:30:06.818Z",
+      "responseTime": 1198,
+      "lastError": null,
       "createdAt": "2025-09-25T18:48:22.446Z"
     },
     {
       "url": "https://httpbin.org/delay/1",
       "name": "Delay Test",
       "id": "ab63fb52-3a2d-492a-acc4-8f184255b6dc",
-      "status": "offline",
-      "lastPing": "2025-09-25T19:08:33.960Z",
-      "responseTime": 662,
-      "lastError": "HTTP 502: Bad Gateway",
+      "status": "online",
+      "lastPing": "2025-09-25T19:30:11.325Z",
+      "responseTime": 3502,
+      "lastError": null,
       "createdAt": "2025-09-25T18:48:22.888Z"
     },
     {
       "url": "https://https//grandstageproductions.onrender.com/",
       "name": "G-RAND STAGE",
       "id": "412f008a-dd67-4a2e-b707-cc5c2c904d7f",
+      "status": "offline",
+      "lastPing": "2025-09-25T19:30:12.332Z",
+      "responseTime": 4,
+      "lastError": "fetch failed",
+      "createdAt": "2025-09-25T19:17:40.931Z"
+    },
+    {
+      "url": "https://pinkeja.onrender.com",
+      "name": "PIN_KEJA",
+      "id": "51b1014b-954c-42a2-ab30-ebd92f997306",
       "status": "pending",
       "lastPing": null,
       "responseTime": null,
       "lastError": null,
-      "createdAt": "2025-09-25T19:17:40.931Z"
+      "createdAt": "2025-09-25T19:21:26.983Z"
     }
   ],
   "stats": {
     "id": "default",
-    "currentCycle": 1,
-    "totalUrls": 5,
-    "cycleStartTime": "2025-09-25T19:08:12.950Z",
-    "nextCycleTime": "2025-09-25T19:18:12.950Z",
-    "currentUrlIndex": 0,
-    "currentUrlId": null,
+    "currentCycle": 3,
+    "totalUrls": 7,
+    "cycleStartTime": "2025-09-25T19:29:25.853Z",
+    "nextCycleTime": "2025-09-25T19:29:25.852Z",
+    "currentUrlIndex": 5,
+    "currentUrlId": "412f008a-dd67-4a2e-b707-cc5c2c904d7f",
     "isRunning": true,
-    "successfulPingsToday": 7,
-    "failedPingsToday": 7
+    "successfulPingsToday": 21,
+    "failedPingsToday": 9
   }
 }
