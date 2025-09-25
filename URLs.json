@@ -5,8 +5,8 @@
       "name": "Test Site",
       "id": "97395c41-2a22-480c-8b33-583f7573fb7f",
       "status": "online",
-      "lastPing": "2025-09-25T18:48:14.448Z",
-      "responseTime": 1499,
+      "lastPing": "2025-09-25T19:08:17.905Z",
+      "responseTime": 4955,
       "lastError": null,
       "createdAt": "2025-09-25T18:41:25.223Z"
     },
@@ -14,9 +14,9 @@
       "url": "https://httpbin.org/status/200",
       "name": "Status Test",
       "id": "6db15cb8-8f53-46a8-9113-19557154363d",
-      "status": "online",
-      "lastPing": "2025-09-25T18:48:18.200Z",
-      "responseTime": 2748,
+      "status": "warning",
+      "lastPing": "2025-09-25T19:08:26.004Z",
+      "responseTime": 7097,
       "lastError": null,
       "createdAt": "2025-09-25T18:44:14.824Z"
     },
@@ -24,9 +24,9 @@
       "url": "https://httpbin.org/delay/1",
       "name": "Delay Test",
       "id": "d247b2c2-8036-4900-8d9d-e34ca6f3a5ad",
-      "status": "warning",
-      "lastPing": "2025-09-25T18:48:27.701Z",
-      "responseTime": 8500,
+      "status": "online",
+      "lastPing": "2025-09-25T19:08:31.063Z",
+      "responseTime": 4057,
       "lastError": null,
       "createdAt": "2025-09-25T18:44:50.303Z"
     },
@@ -34,33 +34,43 @@
       "url": "https://httpbin.org/status/200",
       "name": "Status Test",
       "id": "2fa121db-3f7f-4bd2-baaf-6a88d7803e78",
-      "status": "pending",
-      "lastPing": null,
-      "responseTime": null,
-      "lastError": null,
+      "status": "offline",
+      "lastPing": "2025-09-25T19:08:32.297Z",
+      "responseTime": 233,
+      "lastError": "HTTP 502: Bad Gateway",
       "createdAt": "2025-09-25T18:48:22.446Z"
     },
     {
       "url": "https://httpbin.org/delay/1",
       "name": "Delay Test",
       "id": "ab63fb52-3a2d-492a-acc4-8f184255b6dc",
+      "status": "offline",
+      "lastPing": "2025-09-25T19:08:33.960Z",
+      "responseTime": 662,
+      "lastError": "HTTP 502: Bad Gateway",
+      "createdAt": "2025-09-25T18:48:22.888Z"
+    },
+    {
+      "url": "https://https//grandstageproductions.onrender.com/",
+      "name": "G-RAND STAGE",
+      "id": "412f008a-dd67-4a2e-b707-cc5c2c904d7f",
       "status": "pending",
       "lastPing": null,
       "responseTime": null,
       "lastError": null,
-      "createdAt": "2025-09-25T18:48:22.888Z"
+      "createdAt": "2025-09-25T19:17:40.931Z"
     }
   ],
   "stats": {
     "id": "default",
     "currentCycle": 1,
-    "totalUrls": 3,
-    "cycleStartTime": "2025-09-25T18:48:12.949Z",
-    "nextCycleTime": "2025-09-25T18:54:07.851Z",
-    "currentUrlIndex": 2,
-    "currentUrlId": "d247b2c2-8036-4900-8d9d-e34ca6f3a5ad",
+    "totalUrls": 5,
+    "cycleStartTime": "2025-09-25T19:08:12.950Z",
+    "nextCycleTime": "2025-09-25T19:18:12.950Z",
+    "currentUrlIndex": 0,
+    "currentUrlId": null,
     "isRunning": true,
-    "successfulPingsToday": 3,
-    "failedPingsToday": 0
+    "successfulPingsToday": 7,
+    "failedPingsToday": 7
   }
 }
