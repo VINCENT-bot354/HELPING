@@ -1,10 +1,18 @@
+import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { Trash2, List, Globe } from "lucide-react";
+import { Trash2, List, Globe, Edit2, MoreVertical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { type Url } from "@shared/schema";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { insertUrlSchema, type Url, type InsertUrl } from "@shared/schema";
 
 interface UrlListProps {
   urls: Url[];
@@ -13,6 +21,26 @@ interface UrlListProps {
 
 export default function UrlList({ urls, onUrlDeleted }: UrlListProps) {
   const { toast } = useToast();
+  const [editingUrl, setEditingUrl] = useState<Url | null>(null);
+  const [deletingUrl, setDeletingUrl] = useState<Url | null>(null);
+
+  const form = useForm<InsertUrl>({
+    resolver: zodResolver(insertUrlSchema),
+    defaultValues: {
+      url: "",
+      name: "",
+    },
+  });
+
+  // Update form when editing URL changes
+  useState(() => {
+    if (editingUrl) {
+      form.reset({
+        url: editingUrl.url,
+        name: editingUrl.name || "",
+      });
+    }
+  });
 
   const deleteUrlMutation = useMutation({
     mutationFn: async (id: string) => {
