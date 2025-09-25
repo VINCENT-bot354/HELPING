@@ -46,6 +46,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertUrlSchema.parse(req.body);
       const url = await storage.createUrl(validatedData);
       
+      // Ping the new URL immediately if service is idle
+      await pingService.pingNewUrlIfIdle(url.id);
+      
       // Broadcast update
       const status = await pingService.getStatus();
       broadcast({ type: "url_added", data: { url, status } });

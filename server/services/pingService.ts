@@ -5,6 +5,7 @@ class PingService {
   private isRunning = false;
   private currentTimeout: NodeJS.Timeout | null = null;
   private recklessMode = false;
+  private isInCycle = false;
 
   async start() {
     if (this.isRunning) return;
@@ -34,10 +35,12 @@ class PingService {
     const urls = await storage.getUrls();
     if (urls.length === 0) {
       // No URLs to ping, wait 10 seconds and check again
+      this.isInCycle = false;
       this.currentTimeout = setTimeout(() => this.runCycle(), 10000);
       return;
     }
 
+    this.isInCycle = true;
     const cycleStartTime = new Date();
     await storage.updateStats({
       cycleStartTime,
@@ -84,6 +87,7 @@ class PingService {
 
     console.log(`Cycle completed in ${cycleDuration}ms. Next cycle in ${waitTime}ms`);
 
+    this.isInCycle = false;
     if (waitTime > 0) {
       this.currentTimeout = setTimeout(() => this.runCycle(), waitTime);
     } else {
@@ -170,6 +174,19 @@ class PingService {
       stats: await storage.getStats(),
       urls: await storage.getUrls(),
     };
+  }
+
+  async pingNewUrlIfIdle(urlId: string) {
+    // Only ping immediately if service is running but not currently in a cycle
+    if (!this.isRunning || this.isInCycle) {
+      return;
+    }
+
+    const url = await storage.getUrl(urlId);
+    if (!url) return;
+
+    console.log(`Pinging new URL immediately: ${url.url}`);
+    await this.pingUrl(url);
   }
 
   async setRecklessMode(enabled: boolean) {
