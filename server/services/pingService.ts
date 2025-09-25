@@ -176,6 +176,16 @@ class PingService {
     this.recklessMode = enabled;
     await storage.updateStats({ recklessMode: enabled });
     console.log(`Reckless mode ${enabled ? 'enabled' : 'disabled'}`);
+    
+    // If enabling reckless mode and service is running, restart cycle immediately
+    if (enabled && this.isRunning) {
+      if (this.currentTimeout) {
+        clearTimeout(this.currentTimeout);
+        this.currentTimeout = null;
+      }
+      // Start next cycle immediately
+      this.currentTimeout = setTimeout(() => this.runCycle(), 0);
+    }
   }
 }
 
