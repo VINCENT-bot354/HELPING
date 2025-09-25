@@ -5,22 +5,62 @@
       "name": "Test Site",
       "id": "97395c41-2a22-480c-8b33-583f7573fb7f",
       "status": "online",
-      "lastPing": "2025-09-25T18:43:21.488Z",
-      "responseTime": 1719,
+      "lastPing": "2025-09-25T18:48:14.448Z",
+      "responseTime": 1499,
       "lastError": null,
       "createdAt": "2025-09-25T18:41:25.223Z"
+    },
+    {
+      "url": "https://httpbin.org/status/200",
+      "name": "Status Test",
+      "id": "6db15cb8-8f53-46a8-9113-19557154363d",
+      "status": "online",
+      "lastPing": "2025-09-25T18:48:18.200Z",
+      "responseTime": 2748,
+      "lastError": null,
+      "createdAt": "2025-09-25T18:44:14.824Z"
+    },
+    {
+      "url": "https://httpbin.org/delay/1",
+      "name": "Delay Test",
+      "id": "d247b2c2-8036-4900-8d9d-e34ca6f3a5ad",
+      "status": "warning",
+      "lastPing": "2025-09-25T18:48:27.701Z",
+      "responseTime": 8500,
+      "lastError": null,
+      "createdAt": "2025-09-25T18:44:50.303Z"
+    },
+    {
+      "url": "https://httpbin.org/status/200",
+      "name": "Status Test",
+      "id": "2fa121db-3f7f-4bd2-baaf-6a88d7803e78",
+      "status": "pending",
+      "lastPing": null,
+      "responseTime": null,
+      "lastError": null,
+      "createdAt": "2025-09-25T18:48:22.446Z"
+    },
+    {
+      "url": "https://httpbin.org/delay/1",
+      "name": "Delay Test",
+      "id": "ab63fb52-3a2d-492a-acc4-8f184255b6dc",
+      "status": "pending",
+      "lastPing": null,
+      "responseTime": null,
+      "lastError": null,
+      "createdAt": "2025-09-25T18:48:22.888Z"
     }
   ],
   "stats": {
     "id": "default",
     "currentCycle": 1,
-    "totalUrls": 1,
-    "cycleStartTime": "2025-09-25T18:43:19.768Z",
-    "nextCycleTime": null,
-    "currentUrlIndex": 0,
-    "currentUrlId": "97395c41-2a22-480c-8b33-583f7573fb7f",
+    "totalUrls": 3,
+    "cycleStartTime": "2025-09-25T18:48:12.949Z",
+    "nextCycleTime": "2025-09-25T18:54:07.851Z",
+    "currentUrlIndex": 2,
+    "currentUrlId": "d247b2c2-8036-4900-8d9d-e34ca6f3a5ad",
     "isRunning": true,
-    "successfulPingsToday": 0,
+    "successfulPingsToday": 3,
     "failedPingsToday": 0
   }
 }
