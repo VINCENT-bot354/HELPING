@@ -24,6 +24,11 @@ export default function CurrentActivity({ status }: CurrentActivityProps) {
         <h3 className="text-lg font-semibold mb-4 flex items-center space-x-2">
           <Clock className="text-primary w-4 h-4" />
           <span>Current Activity</span>
+          {stats?.recklessMode && (
+            <span className="text-xs bg-yellow-500 text-yellow-900 px-2 py-1 rounded-full font-medium">
+              RECKLESS MODE
+            </span>
+          )}
         </h3>
         
         <div className="space-y-3">

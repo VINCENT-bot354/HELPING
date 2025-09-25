@@ -96,6 +96,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         await pingService.start();
       } else if (action === "stop") {
         await pingService.stop();
+      } else if (action === "reckless") {
+        const enabled = req.body?.enabled ?? true;
+        await pingService.setRecklessMode(enabled);
       } else {
         return res.status(400).json({ message: "Invalid action" });
       }

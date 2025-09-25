@@ -36,6 +36,7 @@ export class MemStorage implements IStorage {
       currentUrlIndex: 0,
       currentUrlId: null,
       isRunning: false,
+      recklessMode: false,
       successfulPingsToday: 0,
       failedPingsToday: 0,
     };

@@ -4,6 +4,7 @@ import { type Url } from "@shared/schema";
 class PingService {
   private isRunning = false;
   private currentTimeout: NodeJS.Timeout | null = null;
+  private recklessMode = false;
 
   async start() {
     if (this.isRunning) return;
@@ -40,7 +41,7 @@ class PingService {
     const cycleStartTime = new Date();
     await storage.updateStats({
       cycleStartTime,
-      currentCycle: (await storage.getStats())?.currentCycle || 0 + 1,
+      currentCycle: ((await storage.getStats())?.currentCycle || 0) + 1,
       totalUrls: urls.length,
       currentUrlIndex: 0,
     });
@@ -70,7 +71,7 @@ class PingService {
     const minimumCycleTime = 10 * 60 * 1000; // 10 minutes in milliseconds
 
     let waitTime = 0;
-    if (cycleDuration < minimumCycleTime) {
+    if (!this.recklessMode && cycleDuration < minimumCycleTime) {
       waitTime = minimumCycleTime - cycleDuration;
     }
 
@@ -165,9 +166,16 @@ class PingService {
   async getStatus() {
     return {
       isRunning: this.isRunning,
+      recklessMode: this.recklessMode,
       stats: await storage.getStats(),
       urls: await storage.getUrls(),
     };
+  }
+
+  async setRecklessMode(enabled: boolean) {
+    this.recklessMode = enabled;
+    await storage.updateStats({ recklessMode: enabled });
+    console.log(`Reckless mode ${enabled ? 'enabled' : 'disabled'}`);
   }
 }
 
