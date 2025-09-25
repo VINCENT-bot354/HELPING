@@ -1,0 +1,26 @@
+{
+  "urls": [
+    {
+      "url": "https://httpbin.org/get",
+      "name": "Test Site",
+      "id": "97395c41-2a22-480c-8b33-583f7573fb7f",
+      "status": "online",
+      "lastPing": "2025-09-25T18:43:21.488Z",
+      "responseTime": 1719,
+      "lastError": null,
+      "createdAt": "2025-09-25T18:41:25.223Z"
+    }
+  ],
+  "stats": {
+    "id": "default",
+    "currentCycle": 1,
+    "totalUrls": 1,
+    "cycleStartTime": "2025-09-25T18:43:19.768Z",
+    "nextCycleTime": null,
+    "currentUrlIndex": 0,
+    "currentUrlId": "97395c41-2a22-480c-8b33-583f7573fb7f",
+    "isRunning": true,
+    "successfulPingsToday": 0,
+    "failedPingsToday": 0
+  }
+}
