@@ -32,6 +32,9 @@ class PingService {
   private async runCycle() {
     if (!this.isRunning) return;
 
+    // Check for new URLs in URLs.txt file before starting cycle
+    await storage.checkUrlsTextFile();
+
     const urls = await storage.getUrls();
     if (urls.length === 0) {
       // No URLs to ping, wait 10 seconds and check again

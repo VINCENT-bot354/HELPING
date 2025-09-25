@@ -18,6 +18,7 @@ export interface IStorage {
   // File operations
   saveToFile(): Promise<void>;
   loadFromFile(): Promise<void>;
+  checkUrlsTextFile(): Promise<void>;
 }
 
 export class MemStorage implements IStorage {
@@ -135,6 +136,67 @@ export class MemStorage implements IStorage {
       // File doesn't exist or is invalid, start with empty state
       console.log("URLs.json not found or invalid, starting with empty state");
     }
+
+    // Check and process URLs.txt file
+    await this.processUrlsFromTextFile();
+  }
+
+  async processUrlsFromTextFile(): Promise<void> {
+    const textFilePath = path.join(process.cwd(), "URLs.txt");
+    
+    try {
+      const textData = await fs.readFile(textFilePath, "utf-8");
+      const lines = textData.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+      
+      let hasNewUrls = false;
+      
+      for (const line of lines) {
+        // Check if it's a valid URL format
+        try {
+          new URL(line);
+          
+          // Check if this URL already exists
+          const existingUrl = Array.from(this.urls.values()).find(url => url.url === line);
+          
+          if (!existingUrl) {
+            // Add new URL
+            const id = randomUUID();
+            const url: Url = {
+              url: line,
+              name: `Auto-added: ${line}`,
+              id,
+              status: "pending",
+              lastPing: null,
+              responseTime: null,
+              lastError: null,
+              createdAt: new Date(),
+            };
+            this.urls.set(id, url);
+            hasNewUrls = true;
+            console.log(`Auto-added URL from URLs.txt: ${line}`);
+          }
+        } catch (urlError) {
+          console.log(`Skipping invalid URL in URLs.txt: ${line}`);
+        }
+      }
+      
+      if (hasNewUrls) {
+        await this.saveToFile();
+      }
+      
+      // Clear the URLs.txt file after processing
+      await fs.writeFile(textFilePath, '');
+      
+    } catch (error) {
+      // URLs.txt doesn't exist or can't be read, which is fine
+      if ((error as any).code !== 'ENOENT') {
+        console.log("Error processing URLs.txt:", error);
+      }
+    }
+  }
+
+  async checkUrlsTextFile(): Promise<void> {
+    await this.processUrlsFromTextFile();
   }
 }
 
