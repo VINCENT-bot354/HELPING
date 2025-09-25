@@ -64,9 +64,9 @@
       "url": "https://kenya-safaris.onrender.com",
       "name": "245 Kenya Safaris",
       "id": "ee1a6daa-0694-4e64-ab71-cccb85a9678e",
-      "status": "online",
-      "lastPing": "2025-09-25T19:59:14.718Z",
-      "responseTime": 2939,
+      "status": "warning",
+      "lastPing": "2025-09-25T20:55:03.519Z",
+      "responseTime": 25281,
       "lastError": null,
       "createdAt": "2025-09-25T19:34:36.122Z"
     },
@@ -74,9 +74,9 @@
       "url": "https://fillpdfs.onrender.com",
       "name": "FILL-PDF CERTIFICATES",
       "id": "dffb5bfe-ec38-4958-8775-bcd2152ecb2f",
-      "status": "online",
-      "lastPing": "2025-09-25T19:59:15.960Z",
-      "responseTime": 240,
+      "status": "warning",
+      "lastPing": "2025-09-25T20:55:33.976Z",
+      "responseTime": 29454,
       "lastError": null,
       "createdAt": "2025-09-25T19:45:26.497Z"
     },
@@ -85,8 +85,8 @@
       "name": "FILL PDFS",
       "id": "217e0fe7-71b2-42db-aaa1-424b813cdb74",
       "status": "online",
-      "lastPing": "2025-09-25T19:59:17.160Z",
-      "responseTime": 195,
+      "lastPing": "2025-09-25T20:55:35.171Z",
+      "responseTime": 193,
       "lastError": null,
       "createdAt": "2025-09-25T19:47:27.487Z"
     }
@@ -97,10 +97,10 @@
     "totalUrls": 9,
     "cycleStartTime": "2025-09-25T20:53:51.126Z",
     "nextCycleTime": "2025-09-25T19:58:42.321Z",
-    "currentUrlIndex": 5,
-    "currentUrlId": "51b1014b-954c-42a2-ab30-ebd92f997306",
+    "currentUrlIndex": 8,
+    "currentUrlId": "217e0fe7-71b2-42db-aaa1-424b813cdb74",
     "isRunning": true,
-    "successfulPingsToday": 52,
-    "failedPingsToday": 21
+    "successfulPingsToday": 54,
+    "failedPingsToday": 22
   }
 }
