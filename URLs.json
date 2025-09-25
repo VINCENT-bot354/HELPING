@@ -5,8 +5,8 @@
       "name": "Test Site",
       "id": "97395c41-2a22-480c-8b33-583f7573fb7f",
       "status": "online",
-      "lastPing": "2025-09-25T21:13:51.385Z",
-      "responseTime": 256,
+      "lastPing": "2025-09-25T21:47:00.916Z",
+      "responseTime": 319,
       "lastError": null,
       "createdAt": "2025-09-25T18:41:25.223Z"
     },
@@ -15,8 +15,8 @@
       "name": "Status Test",
       "id": "6db15cb8-8f53-46a8-9113-19557154363d",
       "status": "online",
-      "lastPing": "2025-09-25T21:13:52.489Z",
-      "responseTime": 102,
+      "lastPing": "2025-09-25T21:47:02.528Z",
+      "responseTime": 610,
       "lastError": null,
       "createdAt": "2025-09-25T18:44:14.824Z"
     },
@@ -25,8 +25,8 @@
       "name": "Delay Test",
       "id": "d247b2c2-8036-4900-8d9d-e34ca6f3a5ad",
       "status": "online",
-      "lastPing": "2025-09-25T21:13:54.750Z",
-      "responseTime": 1259,
+      "lastPing": "2025-09-25T21:47:05.193Z",
+      "responseTime": 1663,
       "lastError": null,
       "createdAt": "2025-09-25T18:44:50.303Z"
     },
@@ -35,8 +35,8 @@
       "name": "Status Test",
       "id": "2fa121db-3f7f-4bd2-baaf-6a88d7803e78",
       "status": "online",
-      "lastPing": "2025-09-25T21:13:55.818Z",
-      "responseTime": 65,
+      "lastPing": "2025-09-25T21:47:06.647Z",
+      "responseTime": 453,
       "lastError": null,
       "createdAt": "2025-09-25T18:48:22.446Z"
     },
@@ -45,8 +45,8 @@
       "name": "Delay Test",
       "id": "ab63fb52-3a2d-492a-acc4-8f184255b6dc",
       "status": "online",
-      "lastPing": "2025-09-25T21:14:01.720Z",
-      "responseTime": 4900,
+      "lastPing": "2025-09-25T21:47:09.341Z",
+      "responseTime": 1691,
       "lastError": null,
       "createdAt": "2025-09-25T18:48:22.888Z"
     },
@@ -55,8 +55,8 @@
       "name": "PIN_KEJA",
       "id": "51b1014b-954c-42a2-ab30-ebd92f997306",
       "status": "online",
-      "lastPing": "2025-09-25T21:14:02.876Z",
-      "responseTime": 154,
+      "lastPing": "2025-09-25T21:47:10.576Z",
+      "responseTime": 233,
       "lastError": null,
       "createdAt": "2025-09-25T19:21:26.983Z"
     },
@@ -65,8 +65,8 @@
       "name": "245 Kenya Safaris",
       "id": "ee1a6daa-0694-4e64-ab71-cccb85a9678e",
       "status": "online",
-      "lastPing": "2025-09-25T21:14:06.776Z",
-      "responseTime": 2898,
+      "lastPing": "2025-09-25T21:47:14.655Z",
+      "responseTime": 3078,
       "lastError": null,
       "createdAt": "2025-09-25T19:34:36.122Z"
     },
@@ -75,8 +75,8 @@
       "name": "FILL-PDF CERTIFICATES",
       "id": "dffb5bfe-ec38-4958-8775-bcd2152ecb2f",
       "status": "online",
-      "lastPing": "2025-09-25T21:14:08.091Z",
-      "responseTime": 313,
+      "lastPing": "2025-09-25T21:47:15.898Z",
+      "responseTime": 241,
       "lastError": null,
       "createdAt": "2025-09-25T19:45:26.497Z"
     },
@@ -85,22 +85,42 @@
       "name": "FILL PDFS",
       "id": "217e0fe7-71b2-42db-aaa1-424b813cdb74",
       "status": "online",
-      "lastPing": "2025-09-25T21:14:09.266Z",
-      "responseTime": 173,
+      "lastPing": "2025-09-25T21:47:17.097Z",
+      "responseTime": 197,
       "lastError": null,
       "createdAt": "2025-09-25T19:47:27.487Z"
+    },
+    {
+      "url": "https://chara-fashion.onrender.com",
+      "name": "Auto-added: https://chara-fashion.onrender.com",
+      "id": "159d450d-399e-4320-9712-aa8dca90fc00",
+      "status": "online",
+      "lastPing": "2025-09-25T21:47:18.334Z",
+      "responseTime": 235,
+      "lastError": null,
+      "createdAt": "2025-09-25T21:27:00.590Z"
+    },
+    {
+      "url": "https://254kenyasafaris.africa",
+      "name": "Auto-added: https://254kenyasafaris.africa",
+      "id": "c0f48ff5-9221-428d-a9bd-c8c59946d47c",
+      "status": "online",
+      "lastPing": "2025-09-25T21:47:22.250Z",
+      "responseTime": 2912,
+      "lastError": null,
+      "createdAt": "2025-09-25T21:37:00.594Z"
     }
   ],
   "stats": {
     "id": "default",
-    "currentCycle": 10,
-    "totalUrls": 9,
-    "cycleStartTime": "2025-09-25T21:13:51.129Z",
-    "nextCycleTime": "2025-09-25T21:13:51.128Z",
-    "currentUrlIndex": 8,
-    "currentUrlId": "217e0fe7-71b2-42db-aaa1-424b813cdb74",
+    "currentCycle": 14,
+    "totalUrls": 11,
+    "cycleStartTime": "2025-09-25T21:47:00.597Z",
+    "nextCycleTime": "2025-09-25T21:47:00.596Z",
+    "currentUrlIndex": 10,
+    "currentUrlId": "c0f48ff5-9221-428d-a9bd-c8c59946d47c",
     "isRunning": true,
-    "successfulPingsToday": 72,
-    "failedPingsToday": 22
+    "successfulPingsToday": 111,
+    "failedPingsToday": 23
   }
 }
